@@ -5,6 +5,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import javax.xml.bind.annotation.XmlAccessType;
 
+/**
+ * @author keerthana
+ * this class represents the sales org fields
+ */
+
 @XmlRootElement(name = "SALES_ORG")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SalesOrg {

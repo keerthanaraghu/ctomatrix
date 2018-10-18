@@ -5,10 +5,15 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
 
-@XmlRootElement(name = "Options")
+/**
+ * @author keerthana 
+ * This class represents the option fields
+ */
+@XmlRootElement(name = "Option")
 @XmlAccessorType(XmlAccessType.FIELD)
 
 public class Option {
@@ -27,20 +32,29 @@ public class Option {
 	
 	@XmlElement (name = "END_DATE")
 	private Date endDate;
+	
+	@XmlElement (name = "SALES_ORGS")
+	private List<SalesOrg> salesOrg;
 
 	
 	public Option() {
 		super();
 	}
 
-	public Option(String optionId, String publishedDesc, String displayOnWeb, Date startDate, Date endDate) {
+	
+
+	public Option(String optionId, String publishedDesc, String displayOnWeb, Date startDate, Date endDate,
+			List<SalesOrg> salesOrg) {
 		super();
 		this.optionId = optionId;
 		this.publishedDesc = publishedDesc;
 		this.displayOnWeb = displayOnWeb;
 		this.startDate = startDate;
 		this.endDate = endDate;
+		this.salesOrg = salesOrg;
 	}
+
+
 
 	public String getOptionId() {
 		return optionId;
@@ -80,6 +94,18 @@ public class Option {
 
 	public void setEndDate(Date endDate) {
 		this.endDate = endDate;
+	}
+
+
+
+	public List<SalesOrg> getSalesOrg() {
+		return salesOrg;
+	}
+
+
+
+	public void setSalesOrg(List<SalesOrg> salesOrg) {
+		this.salesOrg = salesOrg;
 	}
 	
 	

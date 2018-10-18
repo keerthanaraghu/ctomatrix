@@ -2,6 +2,11 @@ package com.assignment.entities;
 
 import java.util.Date;
 
+
+/**
+ * @author keerthana
+ * this class represents the table structure of Feed_By_SKU table
+ */
 public class FeedBySKU {
 	
 	private String sku;
