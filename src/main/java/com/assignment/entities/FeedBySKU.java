@@ -12,7 +12,7 @@ public class FeedBySKU {
 	private String sku;
 	private Integer optionGroupID;
 	private String optionID;
-	private String salesOrg;
+	private Integer salesOrg;
 	private String mpn;
 	private String description;
 	private String publishedDescr;
@@ -38,10 +38,10 @@ public class FeedBySKU {
 	public void setOptionID(String optionID) {
 		this.optionID = optionID;
 	}
-	public String getSalesOrg() {
+	public Integer getSalesOrg() {
 		return salesOrg;
 	}
-	public void setSalesOrg(String salesOrg) {
+	public void setSalesOrg(Integer salesOrg) {
 		this.salesOrg = salesOrg;
 	}
 	public String getMpn() {
