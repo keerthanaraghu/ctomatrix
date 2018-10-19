@@ -44,6 +44,8 @@ public class FeedMapper {
 				.forEach(lfn -> lfn.getOptions().stream()
 				.forEach(lo -> lo.getSalesOrg().stream()
 						.forEach(lso -> {
+							if (lo.getDisplayOnWeb().equals("Y")) {
+							if (lso.getExtentionType().equals("Primary")) {
 							sku.setSku(lkm.getId());
 							sku.setOptionGroupID(lfn.getId());
 							sku.setOptionID(lo.getOptionId());
@@ -55,6 +57,8 @@ public class FeedMapper {
 							sku.setStartDate(lo.getStartDate());
 							sku.setEndDate(lo.getEndDate());
 							feedBySKU.add(sku);
+							}
+							}
 						}))));
 				
 		
