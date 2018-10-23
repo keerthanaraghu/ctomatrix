@@ -26,10 +26,10 @@ public class KMat {
 	private String mpn;
 	
 	@XmlElement (name = "FIND_NOS")
-	private List<FindNos> findNos;
+	private FindNos findNos;
 
 
-	public KMat(String id, String mpn, List<FindNos> findNos) {
+	public KMat(String id, String mpn, FindNos findNos) {
 		super();
 		this.id = id;
 		this.mpn = mpn;
@@ -56,11 +56,11 @@ public class KMat {
 		this.mpn = mpn;
 	}
 
-	public List<FindNos> getFindNos() {
+	public FindNos getFindNos() {
 		return findNos;
 	}
 
-	public void setFindNos(List<FindNos> findNos) {
+	public void setFindNos(FindNos findNos) {
 		this.findNos = findNos;
 	}
 	

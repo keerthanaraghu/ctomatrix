@@ -38,12 +38,12 @@ public class FeedMapper {
 
 	public List<FeedBySKU> convertToEntity(){
 		List<FeedBySKU> feedBySKU = new ArrayList<FeedBySKU>();
-		FeedBySKU sku = null;
+		FeedBySKU sku = new FeedBySKU();
 		
-		ctomatrix.getKmats().stream().forEach(lkm -> lkm.getFindNos().stream()
-				.forEach(lfn -> lfn.getOptions().stream()
-				.forEach(lo -> lo.getSalesOrg().stream()
-						.forEach(lso -> {
+		ctomatrix.getKmats().getKmats().stream().forEach(lkm -> 
+		lkm.getFindNos().getFindNos().stream().forEach(lfn -> 
+			lfn.getOptions().getOptions().stream().forEach(lo -> 
+				lo.getSalesOrg().getSalesOrg().stream().forEach(lso -> {
 							if (lo.getDisplayOnWeb().equals("Y")) {
 							if (lso.getExtentionType().equals("Primary")) {
 							sku.setSku(lkm.getId());

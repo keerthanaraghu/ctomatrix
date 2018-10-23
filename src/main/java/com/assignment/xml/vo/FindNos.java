@@ -1,5 +1,4 @@
 package com.assignment.xml.vo;
-
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -13,56 +12,29 @@ import javax.xml.bind.annotation.XmlAccessType;
  * this class represents the FindNo fields
  */
 
-@XmlRootElement(name = "FIND_NO")
+@XmlRootElement(name = "FIND_NOS")
 @XmlAccessorType(XmlAccessType.FIELD)
-
 public class FindNos {
 	
-	@XmlElement (name = "ID")
-	private Integer id;
-	
-	@XmlElement (name = "Description")
-	private String description;
-	
-	@XmlElement (name = "Options")
-	private List<Option> options;
+	@XmlElement (name = "FIND_NO")
+	private List<FindNo> findNos;
+
+	public FindNos(List<FindNo> findNos) {
+		super();
+		this.findNos = findNos;
+	}
 
 	public FindNos() {
 		super();
 	}
 
-	public FindNos(Integer id, String description, List<Option> options) {
-		super();
-		this.id = id;
-		this.description = description;
-		this.options = options;
+	public List<FindNo> getFindNos() {
+		return findNos;
 	}
 
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public List<Option> getOptions() {
-		return options;
-	}
-
-	public void setOptions(List<Option> options) {
-		this.options = options;
+	public void setFindNos(List<FindNo> findNos) {
+		this.findNos = findNos;
 	}
 	
 	
-	
-
 }
