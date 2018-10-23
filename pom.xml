@@ -22,8 +22,8 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.assignment.feedclient</groupId>
-			<artifactId>feedclient</artifactId>
+			<groupId>com.assignment.FeedClient</groupId>
+			<artifactId>FeedClient</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
