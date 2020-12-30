@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 public class Option {
 	
 	@XmlElement (name = "ID")
-	private String optionId;
+	private Integer optionId;
 	
 	@XmlElement (name = "PUBLISHED_DESCRIPTION")
 	private String publishedDesc;
@@ -28,13 +28,13 @@ public class Option {
 	private String displayOnWeb;
 	
 	@XmlElement (name = "START_DATE")
-	private Date startDate;
+	private String startDate;
 	
 	@XmlElement (name = "END_DATE")
-	private Date endDate;
+	private String endDate;
 	
 	@XmlElement (name = "SALES_ORGS")
-	private List<SalesOrg> salesOrg;
+	private SalesOrgs salesOrg;
 
 	
 	public Option() {
@@ -43,8 +43,8 @@ public class Option {
 
 	
 
-	public Option(String optionId, String publishedDesc, String displayOnWeb, Date startDate, Date endDate,
-			List<SalesOrg> salesOrg) {
+	public Option(Integer optionId, String publishedDesc, String displayOnWeb, String startDate, String endDate,
+			SalesOrgs salesOrg) {
 		super();
 		this.optionId = optionId;
 		this.publishedDesc = publishedDesc;
@@ -56,11 +56,11 @@ public class Option {
 
 
 
-	public String getOptionId() {
+	public Integer getOptionId() {
 		return optionId;
 	}
 
-	public void setOptionId(String optionId) {
+	public void setOptionId(Integer optionId) {
 		this.optionId = optionId;
 	}
 
@@ -80,31 +80,31 @@ public class Option {
 		this.displayOnWeb = displayOnWeb;
 	}
 
-	public Date getStartDate() {
+	public String getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(Date startDate) {
+	public void setStartDate(String startDate) {
 		this.startDate = startDate;
 	}
 
-	public Date getEndDate() {
+	public String getEndDate() {
 		return endDate;
 	}
 
-	public void setEndDate(Date endDate) {
+	public void setEndDate(String endDate) {
 		this.endDate = endDate;
 	}
 
 
 
-	public List<SalesOrg> getSalesOrg() {
+	public SalesOrgs getSalesOrg() {
 		return salesOrg;
 	}
 
 
 
-	public void setSalesOrg(List<SalesOrg> salesOrg) {
+	public void setSalesOrg(SalesOrgs salesOrg) {
 		this.salesOrg = salesOrg;
 	}
 	
